@@ -1,7 +1,12 @@
-<html>
-  <div class="flex justify-between py-3 px-6">
-    <div>
-      <span></span>
+---
+import BestPick from "/BestPick.svg";
+---
+
+<nav>
+  <div class="flex w-full justify-between py-3 px-6 items-center mt-4">
+    <div class="flex items-center gap-3">
+      <img src={BestPick} class="h-10 w-10" />
+      <span class="text-content font-bold text-lg">Best Pick</span>
     </div>
     <button
       class="sm:hidden bg-inherit w-10 h-10"
@@ -14,15 +19,15 @@
         <rect width="40" x="50" y="65" height="10" rx="5"> </rect>
       </svg>
     </button>
-  </div>
-  <nav class="mt-4 hidden sm:flex">
-    <ul class="gap-5 flex">
-      <a href="" class="text-content text-sm">Start</a>
-      <a href="" class="text-content text-sm">Products</a>
-      <a href="" class="text-content text-sm">Partnerships and Services</a>
-      <a href="" class="text-content text-sm">About</a>
-      <a href="" class="text-content text-sm">Contact</a>
-    </ul>
+    <nav class="hidden sm:flex">
+      <ul class="gap-5 flex">
+        <a href="" class="text-content text-sm">Start</a>
+        <a href="" class="text-content text-sm">Products</a>
+        <a href="" class="text-content text-sm">Partnerships and Services</a>
+        <a href="" class="text-content text-sm">About</a>
+        <a href="" class="text-content text-sm">Contact</a>
+      </ul>
+    </nav>
   </nav>
 
 </html>
