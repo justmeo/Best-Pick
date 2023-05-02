@@ -1,0 +1,33 @@
+---
+import BestPick from "/BestPick.svg";
+---
+
+<nav>
+  <div class="flex w-full justify-between py-3 px-6 items-center mt-4">
+    <div class="flex items-center gap-3">
+      <img src={BestPick} class="h-10 w-10" />
+      <span class="text-content font-bold text-lg">Best Pick</span>
+    </div>
+    <button
+      class="sm:hidden bg-inherit w-10 h-10"
+      aria-controls="main navigation"
+      aria-expanded="false"
+    >
+      <svg viewBox="0 0 100 100" class="fill-primary-300">
+        <rect width="80" x="10" y="25" height="10" rx="5"> </rect>
+        <rect width="60" x="30" y="45" height="10" rx="5"> </rect>
+        <rect width="40" x="50" y="65" height="10" rx="5"> </rect>
+      </svg>
+    </button>
+    <nav class="hidden sm:flex">
+      <ul class="gap-5 flex">
+        <a href="" class="text-content text-sm">Start</a>
+        <a href="" class="text-content text-sm">Products</a>
+        <a href="" class="text-content text-sm">Partnerships and Services</a>
+        <a href="" class="text-content text-sm">About</a>
+        <a href="" class="text-content text-sm">Contact</a>
+      </ul>
+    </nav>
+  </nav>
+
+</html>
