@@ -9,15 +9,14 @@ import BestPick from "/BestPick.svg";
       <span class="text-content font-bold"> Best Pick</span>
     </div>
     <button
-      class="sm:hidden bg-inherit w-10 h-10 z-30 "
+      class="sm:hidden bg-inherit w-10 h-10 z-30"
       aria-controls="main navigation"
       aria-expanded="false"
-         
-      >
+    >
       <svg viewBox="0 0 100 100" class="fill-primary-300">
-        <rect width="80" x="10" y="25" height="10" rx="5"> </rect>
-        <rect width="60" x="30" y="45" height="10" rx="5"> </rect>
-        <rect width="40" x="50" y="65" height="10" rx="5"> </rect>
+        <rect width="80" x="10" y="25" height="10" rx="5" class="transition-all duration-300"> </rect>
+        <rect width="60" x="30" y="45" height="10" rx="5" class="transition-all duration-300"> </rect>
+        <rect width="40" x="50" y="65" height="10" rx="5" class="transition-all duration-300"> </rect>
       </svg>
     </button>
     <nav class="hidden sm:flex fixed top-10 right-10">
@@ -51,11 +50,11 @@ import BestPick from "/BestPick.svg";
   </div>
   <nav
     id="side-nav"
-    class="fixed right-0 top-0 bg-primary-400 h-screen w-0 sm:hidden transition-all peer"
+    class="fixed right-0 top-0 bg-primary-400 h-screen w-0 sm:hidden transition-all"
   >
     <ul class="flex-col flex gap-5 mt-20">
       <li class="p-3">
-      <a href="#Start" class="text-content  text-lg font-[Archivo]">Start</a>
+        <a href="#Start" class="text-content text-lg font-[Archivo]">Start</a>
       </li>
       <li class="p-3">
         <a href="#Products" class="text-content text-lg font-[Archivo]"
@@ -68,7 +67,7 @@ import BestPick from "/BestPick.svg";
         >
       </li>
       <li class="p-3">
-<a href="#About" class="text-content text-lg font-[Archivo]">About</a>
+        <a href="#About" class="text-content text-lg font-[Archivo]">About</a>
       </li>
       <li class="p-3">
         <a href="#Contact" class="text-content text-lg font-[Archivo]"
@@ -86,8 +85,60 @@ import BestPick from "/BestPick.svg";
   button.addEventListener("click", () => {
     if (classes.contains("w-0")) {
       nav.classList.replace("w-0", "w-screen");
-    }else{
+      button.children[0].classList.replace(
+        "fill-primary-300",
+        "fill-primary-100"
+      );
+      animatebutton(button.children[0]);
+    } else {
       nav.classList.replace("w-screen", "w-0");
+      button.children[0].classList.replace(
+        "fill-primary-100",
+        "fill-primary-300"
+      );
+      resetbutton(button.children[0]);
     }
   });
+
+  function animatebutton(svg) {
+    const [rect1, rect2, rect3] = svg.children;
+    rect3.setAttribute("width", "80");
+    rect3.setAttribute("height", "0");
+    //set width to 80
+    rect2.setAttribute("width", "80");
+    // rotate rect 1 45deg with transition of 0.3s using tailwind css classes
+    rect1.classList.add(
+      "transform",
+      "rotate-45",
+      "duration-300",
+      "origin-center"
+    );
+    rect2.classList.add(
+      "transform",
+      "-rotate-45",
+      "duration-300",
+      "origin-center"
+    );
+  }
+
+  function resetbutton(svg) {
+    const [rect1, rect2, rect3] = svg.children;
+    rect3.setAttribute("width", "40");
+    rect3.setAttribute("height", "10");
+    //set width to 80
+    rect2.setAttribute("width", "60");
+    // rotate rect 1 45deg with transition of 0.3s using tailwind css classes
+    rect1.classList.remove(
+      "transform",
+      "rotate-45",
+      "duration-300",
+      "origin-center"
+    );
+    rect2.classList.remove(
+      "transform",
+      "-rotate-45",
+      "duration-300",
+      "origin-center"
+    ); 
+  }
 </script>
