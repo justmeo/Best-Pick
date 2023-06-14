@@ -4,31 +4,90 @@ import BestPick from "/BestPick.svg";
 
 <nav>
   <div class="flex w-full justify-between py-3 px-6 items-center mt-4">
-    <div class="flex items-center gap-3">
+    <div class="flex items-center gap-3 sm:hidden">
       <img src={BestPick} class="h-10 w-10" />
-      <span class="text-content font-bold text-lg font-['Work\\ Sans']">Best Pick</span>
-      
+      <span class="text-content font-bold"> Best Pick</span>
     </div>
     <button
-      class="sm:hidden bg-inherit w-10 h-10"
+      class="sm:hidden bg-inherit w-10 h-10 z-30 "
       aria-controls="main navigation"
       aria-expanded="false"
-    >
+         
+      >
       <svg viewBox="0 0 100 100" class="fill-primary-300">
         <rect width="80" x="10" y="25" height="10" rx="5"> </rect>
         <rect width="60" x="30" y="45" height="10" rx="5"> </rect>
         <rect width="40" x="50" y="65" height="10" rx="5"> </rect>
       </svg>
     </button>
-    <nav class="hidden sm:flex">
-      <ul class="gap-5 flex">
-        <a href="" class="text-content text-sm font-[Archivo]">Start</a>
-        <a href="" class="text-content text-sm font-[Archivo]">Products</a>
-        <a href="" class="text-content text-sm font-[Archivo]">Partnerships and Services</a>
-        <a href="" class="text-content text-sm font-[Archivo]">About</a>
-        <a href="" class="text-content text-sm font-[Archivo]">Contact</a>
+    <nav class="hidden sm:flex fixed top-10 right-10">
+      <ul class="gap-10 flex">
+        <li>
+          <a
+            href="#Start"
+            class="text-content text-md font-light font-[Archivo]">Start</a
+          >
+        </li>
+        <li>
+          <a href="#Products" class="text-content text-sm font-[Archivo]"
+            >Products</a
+          >
+        </li>
+        <li>
+          <a href="#Partnerships" class="text-content text-sm font-[Archivo]"
+            >Partnerships and Services</a
+          >
+        </li>
+        <li>
+          <a href="#About" class="text-content text-sm font-[Archivo]">About</a>
+        </li>
+        <li>
+          <a href="#Contact" class="text-content text-sm font-[Archivo]"
+            >Contact</a
+          >
+        </li>
       </ul>
     </nav>
+  </div>
+  <nav
+    id="side-nav"
+    class="fixed right-0 top-0 bg-primary-400 h-screen w-0 sm:hidden transition-all peer"
+  >
+    <ul class="flex-col flex gap-5 mt-20">
+      <li class="p-3">
+      <a href="#Start" class="text-content  text-lg font-[Archivo]">Start</a>
+      </li>
+      <li class="p-3">
+        <a href="#Products" class="text-content text-lg font-[Archivo]"
+          >Products</a
+        >
+      </li>
+      <li class="p-3">
+        <a href="#Partnerships" class="text-content text-lg font-[Archivo]"
+          >Partnerships and Services</a
+        >
+      </li>
+      <li class="p-3">
+<a href="#About" class="text-content text-lg font-[Archivo]">About</a>
+      </li>
+      <li class="p-3">
+        <a href="#Contact" class="text-content text-lg font-[Archivo]"
+          >Contact</a
+        >
+      </li>
+    </ul>
   </nav>
+</nav>
 
-</html>
+<script>
+  const button = document.querySelector("button");
+  const nav = document.querySelector("#side-nav");
+  const classes = nav.classList;
+  button.addEventListener("click", () => {
+    if (classes.contains("w-0")) {
+      nav.classList.replace("w-0", "w-screen");
+    }else{
+      nav.classList.replace("w-screen", "w-0");
+    }
+  });
+</script>
