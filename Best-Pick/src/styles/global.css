@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "Work Sans";
+  src: url("/fonts/WorkSans-VariableFont_wght.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Archivo";
+  src: url("/fonts/Archivo-VariableFont_wdth,wght.ttf") format("truetype");
+}
