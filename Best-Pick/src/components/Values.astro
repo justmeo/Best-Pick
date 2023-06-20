@@ -1,0 +1,129 @@
+<span
+    class="text-lg bottom-10 left-10  transition-opacity  duration-300 font-bold text-primary-200"
+>
+</span>
+
+<script>
+    const values = [
+        "integrity",
+        "Value",
+        "Commitment",
+        "Excellence",
+        "Teamwork",
+        "Innovation",
+        "Customer Focus",
+        "Respect",
+        "Passion",
+        "Accountability",
+        "Collaboration",
+        "Diversity",
+        "Quality",
+        "Integrity",
+        "Value",
+        "Commitment",
+        "Excellence",
+        "Teamwork",
+        "Innovation",
+        "Customer Focus",
+        "Respect",
+        "Passion",
+        "Accountability",
+        "Collaboration",
+        "Diversity",
+        "Quality",
+        "Integrity",
+        "Value",
+        "Commitment",
+        "Excellence",
+        "Teamwork",
+        "Innovation",
+        "Customer Focus",
+        "Respect",
+        "Passion",
+        "Accountability",
+        "Collaboration",
+        "Diversity",
+        "Quality",
+        "Integrity",
+        "Value",
+        "Commitment",
+        "Excellence",
+        "Teamwork",
+        "Innovation",
+        "Customer Focus",
+        "Respect",
+        "Passion",
+        "Accountability",
+        "Collaboration",
+        "Diversity",
+        "Quality",
+        "Integrity",
+        "Value",
+        "Commitment",
+        "Excellence",
+        "Teamwork",
+        "Innovation",
+        "Customer Focus",
+        "Respect",
+        "Passion",
+        "Accountability",
+        "Collaboration",
+        "Diversity",
+        "Quality",
+        "Integrity",
+        "Value",
+        "Commitment",
+        "Excellence",
+        "Teamwork",
+        "Innovation",
+        "Customer Focus",
+        "Respect",
+        "Passion",
+        "Accountability",
+        "Collaboration",
+        "Diversity",
+        "Quality",
+        "Integrity",
+        "Value",
+        "Commitment",
+        "Excellence",
+        "Teamwork",
+        "Innovation",
+        "Customer Focus",
+        "Respect",
+        "Passion",
+        "Accountability",
+        "Collaboration",
+        "Diversity",
+        "Quality",
+        "Integrity",
+        "Value",
+        "Commitment",
+        "Excellence",
+        "Teamwork",
+        "Innovation",
+        "Customer Focus",
+        "Respect",
+        "Passion",
+        "Accountability",
+        "Collaboration",
+        "Diversity",
+        "Quality",
+    ];
+
+    const spanElement = document.querySelector(".sticky");
+
+    function changeWord() {
+        spanElement.classList.remove("opacity-100");
+        spanElement.classList.add("opacity-0");
+
+        setTimeout(() => {
+            const random = Math.floor(Math.random() * values.length);
+            spanElement.innerHTML = values[random] + ".";
+            spanElement.classList.remove("opacity-0");
+            spanElement.classList.add("opacity-100");
+        }, 500);
+    }
+
+    setInterval(changeWord, 2000);
+</script>
