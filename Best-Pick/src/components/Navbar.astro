@@ -4,7 +4,7 @@ import BestPick from "/BestPick.svg";
 
 <nav>
   <div class="flex w-full justify-between py-3 px-6 items-center mt-4">
-    <div class="flex items-center gap-3 sm:hidden">
+    <div class="flex opacity-0 items-center gap-3 sm:hidden">
       <img src={BestPick} class="h-10 w-10" />
       <span class="text-content font-bold"> Best Pick</span>
     </div>
@@ -20,7 +20,7 @@ import BestPick from "/BestPick.svg";
           y="25"
           height="10"
           rx="5"
-          class="transition-all duration-300"
+          class="transition-all duration-200"
         >
         </rect>
         <rect
@@ -29,7 +29,7 @@ import BestPick from "/BestPick.svg";
           y="45"
           height="10"
           rx="5"
-          class="transition-all duration-300"
+          class="transition-all duration-200"
         >
         </rect>
         <rect
@@ -38,7 +38,7 @@ import BestPick from "/BestPick.svg";
           y="65"
           height="10"
           rx="5"
-          class="transition-all duration-300"
+          class="transition-all duration-200"
         >
         </rect>
       </svg>
@@ -76,26 +76,26 @@ import BestPick from "/BestPick.svg";
     id="side-nav"
     class="fixed right-0 top-0 bg-primary-400 h-screen w-0 sm:hidden transition-all"
   >
-    <ul class="flex-col flex gap-5 mt-20">
+    <ul class="flex-col flex items-center overflow-hidden gap-5 mt-36">
       <li class="p-3">
-        <a href="#Start" class="text-content text-lg font-[Archivo]">Start</a>
+        <a href="#Start" class="text-content text-xl font-[Archivo]">START</a>
       </li>
       <li class="p-3">
-        <a href="#Products" class="text-content text-lg font-[Archivo]"
-          >Products</a
+        <a href="#Products" class="text-content text-xl font-[Archivo]"
+          >PRODUCTS</a
         >
       </li>
       <li class="p-3">
-        <a href="#Partnerships" class="text-content text-lg font-[Archivo]"
-          >Partnerships and Services</a
+        <a href="#Partnerships" class="text-content text-xl font-[Archivo]"
+          >PARTNERSHIPS </a
         >
       </li>
       <li class="p-3">
-        <a href="#About" class="text-content text-lg font-[Archivo]">About</a>
+        <a href="#About" class="text-content text-xl font-[Archivo]">ABOUT</a>
       </li>
       <li class="p-3">
-        <a href="#Contact" class="text-content text-lg font-[Archivo]"
-          >Contact</a
+        <a href="#Contact" class="text-content text-xl font-[Archivo]"
+          >CONTACT</a
         >
       </li>
     </ul>
@@ -134,13 +134,13 @@ import BestPick from "/BestPick.svg";
     rect1.classList.add(
       "transform",
       "rotate-45",
-      "duration-300",
+      "duration-200",
       "origin-center"
     );
     rect2.classList.add(
       "transform",
       "-rotate-45",
-      "duration-300",
+      "duration-200",
       "origin-center"
     );
   }
