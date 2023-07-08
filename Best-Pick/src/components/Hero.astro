@@ -3,19 +3,23 @@ import Logo from "/Logo.svg";
 import Values from "./Values.astro";
 ---
 
-<hero class="flex flex-col">
-        <img src={Logo} class="w-80 ml-1 mt-8" />
-        <p class="ml-6 mt-6  text-content text-2xl text-justify font-[Archivo]">
-            Your Partner for Professional <br> Supplies and Solutions
+<hero class="flex flex-col" id="#start">
+    <div class="ml-8">
+        <img src={Logo} class="w-72 mt-8" />
+        <p class=" mt-6 text-content text-2xl text-justify font-[Archivo]">
+            Your Partner for Professional <br /> Supplies and Solutions
         </p>
-    <p class="ml-2 mt-20  font-bold text-content text-xl font-[Archivo]">
+    </div>
+    <p class="ml-2 mt-20 font-bold text-content text-lg font-[Archivo] px-6">
         What makes us unique...
     </p>
-    <p class="ml-9 mt-5 font-thin text-content font-[Archivo] mb-10">
+    <p
+        class="ml-9 mt-5 font-thin text-content font-[Archivo] mb-14 text-sm px-6"
+    >
         ...is flexible sourcing, competitive prices, on-time deliveries, and
         customized approaches that meet your unique needs. We prioritize
         building long-term relationships with our customers to deliver results
         beyond compare.
     </p>
-    <Values/>
+    <Values />
 </hero>
