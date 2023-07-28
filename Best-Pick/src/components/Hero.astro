@@ -3,29 +3,31 @@ import Logo from "/Logo.svg";
 import Values from "./Values.astro";
 ---
 
-<hero class="h-screen block" id="#start">
-    <div class="flex justify-between ">
-        <div class="ml-8">
-            <img src={Logo} class="w-72 mt-8"/>
-            <p class="mt-6 text-content text-2xl text-justify font-[Archivo]">
-                Your Partner for Professional <br /> Supplies and Solutions
-            </p>
+<hero class="h-screen block px-16" id="#start">
+  <div class="w-[30rem]">
+    <img src={Logo} class=" mt-8 w-full" />
+    <p class="mt-6 text-content text-2xl lg:text-4xl  font-[Archivo] w-full">
+      Your Partner for Professional Supplies and Solutions
+    </p>
+  </div>
+  <div class=" w-full justify-end flex">
+    <div class="relative max-w-md">
+        <div
+          class="bg-primary-500 opacity-50 blur-3xl rounded-full absolute top-1/2 -z-10 w-[350px] h-[200px] left-1/2 -translate-x-1/2 -translate-y-1/2"
+        >
         </div>
-        <div class="relative mt-56 mb-24 max-w-md ">
-            <div class="bg-primary-500  opacity-50 blur-3xl rounded-full absolute top-1/2 -z-10 w-[350px] h-[200px] left-1/2 -translate-x-1/2 -translate-y-1/2">
-            </div>
-            <p class="ml-2   mt-6 font-bold text-content text-xl font-[Archivo] px-6  ">
-                What makes us unique...
-            </p>
-            <p
-                class="ml-9 mt-5 font-thin text-content text-lg font-[Archivo] mb-14  px-6"
-            >
-                ...is flexible sourcing, competitive prices, on-time deliveries, and
-                customized approaches that meet your unique needs. We prioritize
-                building long-term relationships with our customers to deliver results
-                beyond compare.
-            </p>
-        </div>
+        <p class="font-bold text-content text-xl lg:text-2xl font-[Archivo] px-6">
+          What makes us unique...
+        </p>
+        <p
+          class="ml-9 mt-5 font-thin text-content text-lg lg:text-xl font-[Archivo] mb-14 "
+        >
+          ...is flexible sourcing, competitive prices, on-time deliveries, and
+          customized approaches that meet your unique needs. We prioritize building
+          long-term relationships with our customers to deliver results beyond
+          compare.
+        </p>
     </div>
-    <Values />
+  </div>
+  <Values />
 </hero>
