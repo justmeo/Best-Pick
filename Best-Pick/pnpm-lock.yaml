@@ -10,6 +10,9 @@ dependencies:
   astro-particles:
     specifier: ^2.10.0
     version: 2.10.0
+  lax.js:
+    specifier: ^2.0.3
+    version: 2.0.3
   tailwindcss:
     specifier: ^3.0.24
     version: 3.3.2
@@ -1729,6 +1732,10 @@ packages:
   /kleur@4.1.5:
     resolution: {integrity: sha512-o+NO+8WrRiQEE4/7nwRJhN1HWpVmJm511pBHUxPLtp0BUISzlBplORYSmTclCnJvQq2tKu/sgl3xVpkc7ZWuQQ==}
     engines: {node: '>=6'}
+    dev: false
+
+  /lax.js@2.0.3:
+    resolution: {integrity: sha512-q2q0jVRwruvFdQZeeE3OwIszRIkey6CItPmB+BcTUFPgHd2R8LI+bntAI7d2GJEjheu79mzQ++MROkODuZoXlA==}
     dev: false
 
   /lilconfig@2.1.0:
